@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil</title>
+  <style>
+    /* Reset Dasar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #eef2f3;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #1e293b;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: bold;
+    }
+
+    /* Navigasi Horizontal */
+    nav.horizontal {
+      background-color: #64748b;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav.horizontal a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      padding: 8px 15px;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    nav.horizontal a:hover {
+      background-color: #94a3b8;
+      transform: translateY(-3px);
+    }
+
+    /* Tata Letak */
+    .container {
+      display: flex;
+      margin: 20px;
+    }
+
+    .nav-vertical {
+      width: 25%;
+      background-color: #94a3b8;
+      padding: 15px;
+      margin-right: 20px;
+      border-radius: 10px;
+    }
+
+    .nav-vertical a {
+      display: block;
+      text-decoration: none;
+      color: #1e293b;
+      margin-bottom: 10px;
+      padding: 12px;
+      font-weight: bold;
+      background-color: #e2e8f0;
+      border-radius: 6px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .nav-vertical a:hover {
+      background-color: #cbd5e1;
+      transform: translateX(5px);
+    }
+
+    /* Konten Utama */
+    .content {
+      flex: 1;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h2 {
+      color: #1e293b;
+      margin-bottom: 15px;
+    }
+
+    .content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    .content table th, 
+    .content table td {
+      padding: 12px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    .content table th {
+      background-color: #64748b;
+      color: white;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1e293b;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* Sibling Selector */
+    .content h2 + p {
+      font-style: italic;
+      color: #555;
+    }
+
+    .content h2 ~ p {
+      color: #888;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    Profil Saya
+  </header>
+
+  <!-- Navigasi Horizontal -->
+  <nav class="horizontal">
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="profile.html">Profil</a>
+    <a href="registry.html">Registry</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="information.html">Information</a>
+  </nav>
+
+  <!-- Tata Letak -->
+  <div class="container">
+    <!-- Navigasi Vertikal -->
+    <nav class="nav-vertical">
+      <a href="#informasi-pribadi">Informasi Pribadi</a>
+      <a href="#pendidikan">Pendidikan</a>
+      <a href="#hobi">Hobi</a>
+    </nav>
+
+    <!-- Konten Utama -->
+    <div class="content">
+      <h2 id="informasi-pribadi">Informasi Pribadi</h2>
+      <p>Nama: Aiser Khaled</p>
+      <p>Tempat/tgl lahir: Pekanbaru/08 Mei 2003</p>
+      <p>Email: Aisherkhaled@gmail.com</p>
+      <p>Telepon: 084512121215</p>
+
+      <h2 id="pendidikan">Pendidikan</h2>
+      <table>
+        <tr>
+          <th>Tingkat</th>
+          <th>Institusi</th>
+          <th>Jurusan</th>
+          <th>Tahun</th>
+        </tr>
+        <tr>
+          <td>Strata 1</td>
+          <td>Universitas Islam Riau</td>
+          <td>Teknik Informatika</td>
+          <td>2021-2024</td>
+        </tr>
+        <tr>
+          <td>SMA</td>
+          <td>SMAN 1 Pekanbaru</td>
+          <td>IPA</td>
+          <td>2019-2021</td>
+        </tr>
+      </table>
+
+      <h2 id="hobi">Hobi</h2>
+      <p>Memiliki hobi mendaki gunung, membaca buku, dan sangat suka bermain futsal.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2024 Aiser Khaled. Hak Cipta Dilindungi.
+  </footer>
+</body>
+</html>

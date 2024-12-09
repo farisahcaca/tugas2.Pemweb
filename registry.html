@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registry</title>
+  <style>
+    /* Reset Dasar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Georgia, serif;
+      line-height: 1.6;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #4a5568;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Horizontal Navigation */
+    nav.horizontal {
+      background-color: #718096;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav.horizontal a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      padding: 10px 15px;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    nav.horizontal a:hover {
+      background-color: #a0aec0;
+      transform: translateY(-3px);
+    }
+
+    /* Layout */
+    .container {
+      display: flex;
+      margin: 20px;
+    }
+
+    /* Vertical Navigation */
+    .nav-vertical {
+      width: 25%;
+      background-color: #a0aec0;
+      padding: 15px;
+      margin-right: 20px;
+      border-radius: 10px;
+    }
+
+    .nav-vertical a {
+      display: block;
+      text-decoration: none;
+      color: #2d3748;
+      margin-bottom: 10px;
+      padding: 12px;
+      font-weight: bold;
+      background-color: #edf2f7;
+      border-radius: 6px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .nav-vertical a:hover {
+      background-color: #e2e8f0;
+      transform: translateX(5px);
+    }
+
+    /* Content Section */
+    .content {
+      flex: 1;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h2 {
+      color: #2d3748;
+      margin-bottom: 15px;
+    }
+
+    /* Form Styling */
+    form label {
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #4a5568;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    form input, 
+    form select, 
+    form textarea, 
+    form button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    form input:focus, 
+    form select:focus, 
+    form textarea:focus {
+      border-color: #63b3ed;
+      outline: none;
+    }
+
+    form button {
+      background-color: #4a5568;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    form button:hover {
+      background-color: #2d3748;
+      transform: scale(1.05);
+    }
+
+    /* General Sibling Selector */
+    form label ~ input:focus {
+      background-color: #edf2f7;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #4a5568;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+    .contact-info {
+      padding: 20px;
+      background-color: #edf2f7;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    Registration Page
+  </header>
+
+  <!-- Horizontal Navigation -->
+  <nav class="horizontal">
+    <a href="index.html">Home</a>
+    <a href="login.html" class="internal">Login</a>
+    <a href="profile.html" class="internal">Profil</a>
+    <a href="registry.html" class="internal">Registry</a>
+    <a href="gallery.html" class="internal">Gallery</a>
+    <a href="information.html" class="internal">Information</a>
+  </nav>
+
+  <!-- Layout -->
+  <div class="container">
+    <!-- Vertical Navigation -->
+    <nav class="nav-vertical">
+      <a href="#form">Form</a>
+      <a href="#contact">Contact Info</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+      <h2 id="form">Registration Form</h2>
+      <form>
+        <label for="name">Nama Lengkap</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="npm">NPM</label>
+        <input type="text" id="npm" name="npm" required>
+
+        <label for="birthdate">Tanggal Lahir</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="major">Jurusan</label>
+        <select id="major" name="major">
+          <option value="ti">Teknik Informatika</option>
+          <option value="si">Teknik Perminyakan</option>
+          <option value="tk">Teknik Geologi</option>
+        </select>
+
+        <label for="phone">No. HP</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="description">Deskripsi Diri</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+
+        <button type="submit">Register</button>
+      </form>
+      <!-- Contact Info Section -->
+    <div class="contact-info" id="contact">
+      <h2>Contact Info</h2>
+      <p>Email: JayaMakmur@gmail.com</p>
+      <p>Phone: 081515151515</p>
+      <p>Address: Jl. Merdeka No. 123, Pekanbaru, Indonesia</p>
+    </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2024 Registration Page. All Rights Reserved.
+  </footer>
+</body>
+</html>

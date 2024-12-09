@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    /* Reset Dasar */
+    body, h1, form, input, button, footer {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('https://source.unsplash.com/1600x900/?abstract,technology');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+
+    /* Class selector */
+    .form-container {
+      background: rgba(0, 0, 0, 0.6); /* Transparansi latar belakang */
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+      backdrop-filter: blur(10px); /* Blur latar belakang */
+      transition: transform 0.3s ease-in-out;
+    }
+
+    header {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Form dan Label */
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form label {
+      font-size: 1.1em;
+      color: #fff;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+
+    /* Input Fields */
+    form input[type="text"],
+    form input[type="password"] {
+      padding: 12px;
+      font-size: 1.1em;
+      margin-bottom: 20px;
+      border: 2px solid #fff;
+      border-radius: 8px;
+      background-color: #333;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    /* Tombol Login */
+    form button {
+      padding: 12px;
+      font-size: 1.1em;
+      background-color: #ff8c00;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    form button:hover {
+      background-color: #ff6a00;
+      transform: scale(1.1);
+    }
+
+    form button:active {
+      background-color: #e55d00;
+    }
+
+    /* Footer di bawah tombol */
+    footer {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #ddd;
+    }
+
+    footer p {
+      margin-bottom: 5px;
+    }
+
+    footer p a {
+      color: #ff8c00;
+      text-decoration: none;
+    }
+
+    footer p a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 600px) {
+      .form-container {
+        padding: 20px;
+      }
+
+      header {
+        font-size: 1.5em;
+      }
+    }
+
+    /* Descendant Selector */
+    form label {
+      font-size: 1.1em;
+      color: #fff;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+
+    /* Class Selector */
+    .footer-text {
+      color: #ff8c00;
+    }
+
+    /* Sibling Selector Example */
+    form input[type="text"] ~ input[type="password"] {
+      margin-top: 10px;
+    }
+
+    /* General Sibling Selector*/
+    form button ~ footer p {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <header>Login Page</header>
+    <form>
+      <label for="npm">NPM:</label>
+      <input type="text" id="npm" name="npm" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Login</button>
+    </form>
+    <!-- Footer -->
+    <footer>
+      <p>Pastikan data yang Anda masukkan benar sebelum masuk ke halaman selanjutnya.</p>
+      <p>Belum punya akun? <a href="#">Daftar di sini</a>.</p>
+    </footer>
+  </div>
+</body>
+</html>

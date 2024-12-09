@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery Informatic</title>
+  <style>
+    /* Reset Dasar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(90deg, #ff758c, #ff7eb3);
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Horizontal Navigation */
+    nav.horizontal {
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+    }
+    /* Descendant selector */
+    nav.horizontal a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 20px;
+      transition: all 0.4s ease;
+    }
+
+    nav.horizontal a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.1);
+    }
+
+    /* Layout */
+    .container {
+      display: flex;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 1200px;
+    }
+
+    /* Vertical Navigation */
+    nav.vertical {
+      width: 25%;
+      background: linear-gradient(135deg, #43cea2, #185a9d);
+      padding: 20px;
+      margin-right: 20px;
+      border-radius: 15px;
+      color: white;
+    }
+
+    nav.vertical a {
+      display: block;
+      text-decoration: none;
+      color: #f3f4f6;
+      margin-bottom: 15px;
+      padding: 15px;
+      font-weight: bold;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    nav.vertical a:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateX(10px);
+    }
+
+    /* Content Section (Class selector) */
+    .content {
+      flex: 1;
+      padding: 30px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h2 {
+      color: #667eea;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+
+    /* Gallery Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* General Sibling Selector */
+    .gallery img ~ img {
+      opacity: 0.9;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    Gallery Informatic
+  </header>
+
+  <!-- Horizontal Navigation -->
+  <nav class="horizontal">
+    <a href="index.html">Home</a>
+    <a href="login.html" class="internal">Login</a>
+    <a href="profile.html" class="internal">Profil</a>
+    <a href="registry.html" class="internal">Registry</a>
+    <a href="gallery.html" class="internal">Gallery</a>
+    <a href="information.html" class="internal">Information</a>
+  </nav>
+
+  <!-- Layout -->
+  <div class="container">
+    <!-- Vertical Navigation -->
+    <nav class="vertical">
+      <a href="#section1">Vs Code</a>
+      <a href="#section1">Java</a>
+      <a href="#section1">C++</a>
+      <a href="#section1">Python</a>
+      <a href="#section1">Php</a>
+      <a href="#section1">Html</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+      <h2 id="section1">Gallery Bahasa Pemrograman</h2>
+      <div class="gallery">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRss-86vRuxOArrVRmMgerLZ5pi8yCs6U7zsQ&s" alt="Java Script">
+        <img src="https://www.logo.wine/a/logo/Java_(programming_language)/Java_(programming_language)-Logo.wine.svg" alt="Java">
+        <img src="https://logique.s3.ap-southeast-1.amazonaws.com/2020/07/oJY8IGs22lhzP6IVAVuyyQjv1a6xXh5d1589992692178.png" alt="C++">
+        <img src="https://algorit.ma/wp-content/uploads/2022/02/Python-Logo-1030x644.png" alt="Python">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" alt="Php">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf-BIPzW1TXZBH6E09z48VD_ncXqH-lz_wxg&s" alt="Html">
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    &copy; 2024 Gallery Page. All Rights Reserved.
+  </footer>
+</body>
+</html>

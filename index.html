@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index - Welcome to Our Website</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #264653;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* Horizontal Navigation */
+    nav.horizontal {
+      background-color: #2a9d8f;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    /* Descendant selector */
+    nav.horizontal a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      padding: 8px 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav.horizontal a:hover {
+      background-color: #e76f51;
+      border-radius: 5px;
+    }
+
+    /* Layout */
+    .container {
+      display: flex;
+      margin: 20px;
+    }
+
+    /* Vertical Navigation */
+    nav.vertical {
+      width: 20%;
+      background-color: #f4a261;
+      padding: 15px;
+      margin-right: 20px;
+      border-radius: 8px;
+    }
+
+    nav.vertical a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #e76f51;
+      border-radius: 5px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    nav.vertical a:hover {
+      transform: translateX(5px);
+      background-color: #264653;
+    }
+
+    /* Class Selector */
+    .content {
+      flex: 1;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h2 {
+      color: #2a9d8f;
+      margin-bottom: 15px;
+    }
+
+    .content p {
+      margin-bottom: 15px;
+    }
+
+    .content img {
+      max-width: 35%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    /* Link Styles */
+    a.internal {
+      color: #2a9d8f;
+      text-decoration: none;
+    }
+
+    a.internal:hover {
+      text-decoration: underline;
+    }
+
+    /* General Sibling Selector */
+    .content h2 ~ p {
+      font-style: italic;
+      color: #264653;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #264653;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    Inovasi Teknologi Terkini
+  </header>
+
+  <!-- Horizontal Navigation -->
+  <nav class="horizontal">
+    <a href="#">Home</a>
+    <a href="login.html" class="internal">Login</a>
+    <a href="profile.html" class="internal">Profil</a>
+    <a href="registry.html" class="internal">Registry</a>
+    <a href="gallery.html" class="internal">Gallery</a>
+    <a href="information.html" class="internal">Information</a>
+    <a href="https://www.google.com" target="_blank">External Link</a>
+  </nav>
+
+  <!-- Layout -->
+  <div class="container">
+    <!-- Vertical Navigation -->
+    <nav class="vertical">
+      <a href="#video">Video</a>
+      <a href="#content1">Content</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+      <h2 id="video">Introduction Video</h2>
+      <iframe src="https://www.youtube.com/embed/t8Nxs7F4qEM" allowfullscreen></iframe>
+      
+      <!-- Image content internal -->
+      <h2 id="content1">Content 1: Web Development</h2>
+      <p>Pengembangan web melibatkan pembangunan situs web dan aplikasi untuk internet atau jaringan pribadi.</p>
+      <img src="WebDevelopment.png" alt="Web Development">
+       
+      <h2 id="content2">Content 2: Artificial Intelligence</h2>
+      <p>Artificial Intelligence adalah simulasi kecerdasan manusia dalam mesin yang diprogram untuk berpikir dan belajar.</p>
+      <img src="https://www.smkn20jkt.sch.id/wp-content/uploads/2024/03/6.-Mengenal-Apa-Saja-Contoh-Kecerdasan-Buatan-AI.jpg" alt="Artificial Intelligence">
+
+      <h2 id="content3">Content 3: Data Science</h2>
+      <p>Data Science Fokus pada ilmu data untuk menganalisis data dan mengambil kesimpulan guna mendukung pengambilan keputusan..</p>
+      <img src="https://www.inixindo.id/wp-content/uploads/2024/05/7-Sertifikasi-Data-Science-ini-bisa-Membuat-Karirmu-Melesat-Tinggi-di-Era-Data-Driven-870x503.webp" alt="Data Science">
+
+      <h2 id="content4">Content 4: Cybersecurity</h2>
+      <p>Cybersecurity menyoroti pentingnya melindungi sistem, jaringan, dan data dari ancaman digital.</p>
+      <img src="https://www.linknet.id/files/photos/shares/article/cyber%20security.jpg" alt="Cybersecurity">
+
+      <h2 id="content5">Content 5: Cloud Computing</h2>
+      <p>Cloud computing menjelaskan konsep penyediaan layanan seperti server, penyimpanan, dan aplikasi melalui internet.</p>
+      <img src="https://klikdata.co.id/media/uploads/Cloud-Computing-660x400.jpg" alt="Cloud Computing">
+
+      <h2 id="content6">Content 6: Internet of Things (IoT)</h2>
+      <p>The Internet of Things membahas perangkat fisik yang saling terhubung melalui internet, memungkinkan komunikasi dan pengumpulan data.</p>
+      <img src="https://indonesiancloud.com/wp-content/uploads/2022/12/Shutterstock_1028403757-1-1.jpg" alt="Internet of Things">
+
+      <h2 id="content7">Content 7: Blockchain Technology</h2>
+      <p>Blockchain sebagai buku besar digital terdesentralisasi untuk merekam transaksi dengan aman.</p>
+      <img src="https://blogs.iadb.org/caribbean-dev-trends/wp-content/uploads/sites/34/2017/12/Blockchain1.jpg" alt="Blockchain">
+
+      <h2 id="content8">Content 8: Robotics</h2>
+      <p>Robotics fokus pada pengembangan dan aplikasi robot dalam berbagai sektor untuk membantu pekerjaan manusia.</p>
+      <img src="https://futureskillsprime.in/sites/default/files/2021-04/iStock-966248982_0.jpg" alt="Robotics">
+
+      <h2 id="content9">Content 9: Virtual Reality (VR)</h2>
+      <p>Virtual Reality menjelaskan teknologi yang menciptakan pengalaman imersif dalam lingkungan digital.</p>
+      <img src="https://blob.cloudcomputing.id/images/b9c137a5-2f2c-4128-8b15-edfbb7622920/metaverse-vr-l-min.jpg" alt="Virtual Reality">
+
+      <h2 id="content10">Content 10: 5G Technology</h2>
+      <p>5G menjelaskan jaringan seluler generasi kelima yang memberikan kecepatan tinggi dan konektivitas yang lebih baik.</p>
+      <img src="https://newsindonesia.co.id/wp-content/uploads/2020/02/IMG-20200223-WA0015.jpg" alt="5G Technology">
+
+      <p>For more information, check our <a href="information.html" class="internal">Information Page</a>.</p>
+      <p>Visit <a href="https://www.google.com" target="_blank" class="external">Google</a> for additional learning resources.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    &copy; 2024 Our Website. All Rights Reserved.
+  </footer>
+</body>
+</html>

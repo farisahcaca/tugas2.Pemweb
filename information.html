@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Information - Teknik Informatika</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: #2a9d8f;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    /* Navigation Horizontal */
+    nav.horizontal {
+      background: #264653;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    /* Descendant selector */
+    nav.horizontal a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      padding: 8px 15px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    nav.horizontal a:hover {
+      background: #e76f51;
+      border-radius: 5px;
+    }
+
+    /* Container */
+    .container {
+      display: flex;
+      margin: 20px;
+    }
+
+    /* Navigation Vertical */
+    nav.vertical {
+      width: 20%;
+      background: #f4a261;
+      padding: 15px;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
+
+    nav.vertical a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      background: #e76f51;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    nav.vertical a:hover {
+      background-color: #264653;
+      transform: translateX(5px);
+    }
+
+    /* Class selector */
+    .content {
+      flex: 1;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h2 {
+      color: #2a9d8f;
+      margin-bottom: 15px;
+    }
+
+    .content img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .content p {
+      margin-bottom: 15px;
+    }
+
+    /* General Sibling Selector */
+    .content h2 ~ p {
+      color: #264653;
+      font-style: italic;
+    }
+
+    /* Footer */
+    footer {
+      background: #264653;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    Welcome to Teknik Informatika
+  </header>
+
+  <!-- Horizontal Navigation -->
+  <nav class="horizontal">
+    <a href="#">Home</a>
+    <a href="login.html" class="internal">Login</a>
+    <a href="profile.html" class="internal">Profil</a>
+    <a href="registry.html" class="internal">Registry</a>
+    <a href="gallery.html" class="internal">Gallery</a>
+    <a href="information.html" class="internal">Information</a>
+  </nav>
+
+  <!-- Container -->
+  <div class="container">
+    <!-- Vertical Navigation -->
+    <nav class="vertical">
+      <a href="#programming">Programming</a>
+      <a href="#networking">Networking</a>
+      <a href="#databases">Databases</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+      <h2 id="programming">Programming Fundamentals</h2>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPauZzzcpFiC8dEKXPRxcoAoOKFp1L2zY5Gg&s" alt="Programming Illustration">
+      <p>Di Teknik Informatika, Anda akan belajar tentang berbagai bahasa pemrograman seperti Python, Java, C++, Html dan lainnya. Keterampilan ini penting untuk mengembangkan aplikasi perangkat lunak, mengotomatisasi tugas, dan memecahkan masalah komputasi.</p>
+      <p>Penguasaan bahasa pemrograman akan mempersiapkan Anda untuk berkarir di bidang perangkat lunak, dan memungkinkan Anda untuk menciptakan solusi inovatif dalam dunia teknologi.</p>
+
+      <h2 id="networking">Networking Basics</h2>
+      <img src="https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2022_02_Blockchain-1p1.jpg" alt="Networking Illustration">
+      <p>Networking courses mencakup topik-topik seperti jaringan komputer, keamanan jaringan, dan transmisi data. Keterampilan ini sangat penting untuk membangun dan memelihara sistem komunikasi yang andal.</p>
+      <p>Dengan keterampilan ini, Anda dapat mengelola jaringan yang aman dan efektif, serta memahami cara melindungi data dalam sistem yang terhubung secara global.</p>
+
+      <h2 id="databases">Database Management</h2>
+      <img src="https://fatkhan.web.id/wp-content/uploads/2021/10/Pengertian-Database-Management-System-DBMS.jpg" alt="Database Illustration">
+      <p>Mempelajari database sangat penting dalam mengelola data secara efektif. Disini kita akan bekerja dengan SQL, NoSQL, dan teknologi database lainnya untuk mengatur dan mengambil data secara efisien.</p>
+      <p>Keterampilan dalam pengelolaan database memungkinkan Anda untuk merancang sistem yang dapat menyimpan, mengatur, dan mengambil data dengan cepat, yang sangat dibutuhkan dalam berbagai aplikasi modern.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2024 Teknik Informatika. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
